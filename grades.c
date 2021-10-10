@@ -22,7 +22,7 @@ int main()
     grade = F;
 
 
-    switch(grades)
+    switch(grade)
     {
       case A:
       printf("You aced it. Excellent!!\n");
