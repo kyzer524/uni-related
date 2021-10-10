@@ -1,14 +1,14 @@
 #include <stdio.h>
-#include <maths.h>
+#include <math.h>
 
 int main()
 {
   printf("Please enter your grades: \n");
-  scanf("%i", grades);
+  scanf("%i", &grades);
 
   switch(grades)
   {
-    case grades > 89 && grades =< 100:
+    case grades > 89 && grades < 101:
     printf("You aced it. Excellent!!\n");
     break;
 
