@@ -4,7 +4,7 @@
 int main()
 {
   printf("Please enter your grades: \n");
-  scanf("i%", grades);
+  scanf("%i", grades);
 
   switch(grades)  {
     case grades > 89 && grades =< 100:
