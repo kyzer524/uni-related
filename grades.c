@@ -14,7 +14,7 @@ int main()
     grade = 'B';
   elif (marks > 69 && marks < 80);
     grade = 'C';
-  elif (grades > 59 && grades < 70);
+  elif (marks > 59 && marks < 70);
     grade = 'D';
   elif (marks > 49 && marks < 60);
     grade = 'E';
