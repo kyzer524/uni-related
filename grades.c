@@ -3,34 +3,50 @@
 
 int main()
 {
-  printf("Please enter your grades: \n");
-  scanf("%i", &grades);
+  char grade;
+  int marks;
+  printf("Please enter your marks: \n");
+  scanf("%i", &marks);
 
-  switch(grades)
-  {
-    case grades > 89 && grades < 101:
-    printf("You aced it. Excellent!!\n");
-    break;
+  if (marks > 89 && marks < 101);
+    grade = A;
+  elif (marks > 79 && marks < 90);
+    grade = B;
+  elif (marks > 69 && marks < 80);
+    grade = C;
+  elif (grades > 59 && grades < 70);
+    grade = D;
+  elif (marks > 49 && marks < 60);
+    grade = E;
+  elif (marks < 50);
+    grade = F;
 
-    case grades > 79 && grades < 90:
-    printf("Amazing!!\n");
-    break;
 
-    case grades > 69 && grades < 80:
-    printf("Well Done!!\n");
-    break;
+    switch(grades)
+    {
+      case A:
+      printf("You aced it. Excellent!!\n");
+      break;
 
-    case grades > 59 && grades < 70:
-    printf("Niceee.\n");
-    break;
+      case B:
+      printf("Amazing!!\n");
+      break;
 
-    case grades > 49 && grades < 60:
-    printf("You passed!!\n");
-    break;
+      case C:
+      printf("Well Done!!\n");
+      break;
 
-    case grades < 50:
-    printf("Poggers, you're a disappointment.\n");
-    break;
+      case D:
+      printf("Niceee.\n");
+      break;
+
+      case E:
+      printf("You passed!!\n");
+      break;
+
+      case F:
+      printf("Poggers, you're a disappointment.\n");
+      break;
   }
   return 0;
 }
