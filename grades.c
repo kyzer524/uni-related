@@ -10,15 +10,15 @@ int main()
 
   if (marks > 89 && marks < 101);
     grade = 'A';
-  elif (marks > 79 && marks < 90);
+  else if (marks > 79 && marks < 90);
     grade = 'B';
-  elif (marks > 69 && marks < 80);
+  else if (marks > 69 && marks < 80);
     grade = 'C';
-  elif (marks > 59 && marks < 70);
+  else if (grades > 59 && grades < 70);
     grade = 'D';
-  elif (marks > 49 && marks < 60);
+  else if (marks > 49 && marks < 60);
     grade = 'E';
-  elif (marks < 50);
+  else if (marks < 50);
     grade = 'F';
 
 
