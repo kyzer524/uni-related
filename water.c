@@ -3,16 +3,13 @@ University of Leeds
 School of Computing
 COMP1711/XJCO1711- Procedural Programming
 Coursework 1
-
 I confirm that the following code has been developed and written by me and it is entirely the result of my own work.
 I also confirm that I have not copied any parts of this program from another person or any other source or facilitated someone to copy this program from me.
 I confirm that I will not publish the program online or share it with anyone without permission of the module leader.
-
 Student Name: Ahmed Shamy
 Student ID: 201536675
 Email: sc21a3s@leeds.ac.uk
-Date Work Commenced: 06/11/21
-
+Date Work Commenced: 08/11/21
 *************************************************************************/
 
 
@@ -58,36 +55,7 @@ int main (int argc, char* argv[]) // don't change this line
 // NOW IT IS YOUR TURN, YOU CAN DEFINE ANY OTHER VARIABLES YOU MAY NEED BELOW THIS LINE
 // YOU WILL ALSO USE THIS SECTION TO INITIALISE ANY VARAIABLES THAT REQUIRE PROPER INITIALISATION
 
-double AllCustomerFreshWater;	
-	
-	if (CustomerType==1){
-		QSurfaceWaterCharge = 10.00;
-		QStandingCharges =  9.1;
-	}
-		if (CustomerType==2) {
-			QSurfaceWaterCharge = 50.00;
-			QStandingCharges = 118.30;
-		}
-
-	if (40 < QWaterConsumption){
-		QFreshWaterCharge =	(QWaterConsumption-40)*2.50 - ((QWaterConsumption)*0.75 + (12)*0.50 + (7)*0.35 + (5)*0.20);
-	}
-
-	if (26 <= QWaterConsumption <= 40){
-		QFreshWaterCharge = (QWaterConsumption-25)*0.75 - ((12)*0.50 + (7)*0.35 + (5)*0.20);
-	}
-
-	if (13 <= QWaterConsumption <= 25){
-		QFreshWaterCharge =	(QWaterConsumption-12)*0.50 - ((7)*0.35 + (5)*0.20);
-	}
-
-	if (6 <= QWaterConsumption <= 12){
-		QFreshWaterCharge =	(QWaterConsumption-5)*0.35 - (5)*0.20;
-	}
-
-	if (1 <= QWaterConsumption <= 5){
-		QFreshWaterCharge =	(QWaterConsumption)*0.20;
-	}
+double AllCustomerFreshWater;
 
 // END OF SECTION FOR DECLARRING ADDITIONAL VARIABLES AND INITIALISING ANY VARIABLES THAT NEED INITIALISATION
 // -----------------------------------------------------------------------------------------------------------
@@ -135,6 +103,41 @@ double AllCustomerFreshWater;
 // NOW IT IS YOUR TURN, WRITE BELOW THE CODE FOR COMPUTING THE BILL AND UPDATING CUMULATIVE VALUES
 
 
+	if (40 < QWaterConsumption){
+		QFreshWaterCharge =	(QWaterConsumption - 41)*2.50 - (15)*0.75 - (13)*0.50 - (7)*0.35 - (5)*0.20;
+	}
+
+	if (26 <= QWaterConsumption <= 40){
+		QFreshWaterCharge = (QWaterConsumption - 15)*0.75 - (13)*0.50 - (7)*0.35 - (5)*0.20;
+	}
+
+	if (13 <= QWaterConsumption <= 25){
+		QFreshWaterCharge =	(QWaterConsumption - 13)*0.50 - (7)*0.35 - (5)*0.20;
+	}
+
+	if (6 <= QWaterConsumption <= 12){
+		QFreshWaterCharge =	(QWaterConsumption - 5)*0.35 - (5)*0.20;
+	}
+
+	if (1 <= QWaterConsumption <= 5){
+		QFreshWaterCharge =	(QWaterConsumption*0.20);
+	}
+
+	if (CustomerType==1){
+		QSurfaceWaterCharge = 10.00;
+		QStandingCharges =  9.10;
+		QWasteWaterCharge = (QWaterConsumption*0.95)*0.25;
+	}
+
+	if (CustomerType==2){
+		QSurfaceWaterCharge = 50.00;
+		QStandingCharges = (1.30)*91.00;
+		QWasteWaterCharge = (QWaterConsumption*0.95)*0.20;
+		}
+
+	QTotalCharge = QFreshWaterCharge + QStandingCharges + QSurfaceWaterCharge + QWasteWaterCharge;
+	QVAT = QTotalCharge*0.20;
+	QAmountToPay = QTotalCharge + QVAT;
 
 // END OF SECTION FOR WRITING YOUR CODE
 // -------------------------------------------------------------------------------------------
