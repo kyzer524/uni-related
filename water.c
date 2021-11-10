@@ -56,6 +56,7 @@ int main (int argc, char* argv[]) // don't change this line
 // YOU WILL ALSO USE THIS SECTION TO INITIALISE ANY VARAIABLES THAT REQUIRE PROPER INITIALISATION
 
 double AllCustomerFreshWater;
+int number;
 
 // END OF SECTION FOR DECLARRING ADDITIONAL VARIABLES AND INITIALISING ANY VARIABLES THAT NEED INITIALISATION
 // -----------------------------------------------------------------------------------------------------------
@@ -102,43 +103,48 @@ double AllCustomerFreshWater;
 // -------------------------------------------------------------------------------------------
 // NOW IT IS YOUR TURN, WRITE BELOW THE CODE FOR COMPUTING THE BILL AND UPDATING CUMULATIVE VALUES
 
-
 	if (40 < QWaterConsumption){
-		QFreshWaterCharge =	(QWaterConsumption - 41)*2.50 - (15)*0.75 - (13)*0.50 - (7)*0.35 - (5)*0.20;
+		QFreshWaterCharge =	(QWaterConsumption - 40)*2.50 + (15)*0.75 + (13)*0.50 + (7)*0.35 + (5)*0.20;
 	}
 
 	if (26 <= QWaterConsumption <= 40){
-		QFreshWaterCharge = (QWaterConsumption - 15)*0.75 - (13)*0.50 - (7)*0.35 - (5)*0.20;
+		QFreshWaterCharge = (QWaterConsumption - 25)*0.75 + (13)*0.50 + (7)*0.35 + (5)*0.20;
 	}
 
 	if (13 <= QWaterConsumption <= 25){
-		QFreshWaterCharge =	(QWaterConsumption - 13)*0.50 - (7)*0.35 - (5)*0.20;
+		QFreshWaterCharge =	(QWaterConsumption - 12)*0.50 + (7)*0.35 + (5)*0.20;
 	}
 
 	if (6 <= QWaterConsumption <= 12){
-		QFreshWaterCharge =	(QWaterConsumption - 5)*0.35 - (5)*0.20;
+		QFreshWaterCharge =	((QWaterConsumption - 5)*0.35 + (5)*0.20);
 	}
 
-	if (1 <= QWaterConsumption <= 5){
+	if (0 <= QWaterConsumption <= 5){
 		QFreshWaterCharge =	(QWaterConsumption*0.20);
 	}
 
-	if (CustomerType==1){
+	if (CustomerType == 1){
 		QSurfaceWaterCharge = 10.00;
 		QStandingCharges =  9.10;
 		QWasteWaterCharge = (QWaterConsumption*0.95)*0.25;
 	}
 
-	if (CustomerType==2){
+	if (CustomerType == 2){
 		QSurfaceWaterCharge = 50.00;
 		QStandingCharges = (1.30)*91.00;
-		QWasteWaterCharge = (QWaterConsumption*0.95)*0.20;
+		QWasteWaterCharge = (QWaterConsumption*0.95)*2.00;
+		QFreshWaterCharge = QWaterConsumption*2.50;
 		}
 
 	QTotalCharge = QFreshWaterCharge + QStandingCharges + QSurfaceWaterCharge + QWasteWaterCharge;
+	QAmountToPay = QTotalCharge;
+
+	if (CustomerType == 2){
 	QVAT = QTotalCharge*0.20;
 	QAmountToPay = QTotalCharge + QVAT;
+	}
 
+	
 // END OF SECTION FOR WRITING YOUR CODE
 // -------------------------------------------------------------------------------------------
 
