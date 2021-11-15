@@ -162,9 +162,9 @@ QRevenue += QTotalCharge;
 QTotalFreshWater += QWaterConsumption;
 QCost = QTotalFreshWater;
 QAverageDomesticBill = QTotalDomesticCharge/count;
-QIncomeTax = (0.25)*QProfit;
+//income tax is wrong
 QProfit = QRevenue - QCost;
-
+QIncomeTax = (QProfit*0.25);
 // END OF SECTION FOR WRITING YOUR CODE
 // -------------------------------------------------------------------------------------------
 
